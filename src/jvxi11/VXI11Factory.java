@@ -195,10 +195,15 @@ public class VXI11Factory {
         }
         /* (non-Javadoc)
          * @see java.lang.Object#finalize()
-         */
-        protected void finalize() {
-           disconnect();
+         
+         https://stackoverflow.com/questions/2506488/when-is-the-finalize-method-called-in-java
+         https://stackoverflow.com/questions/56139760/why-is-the-finalize-method-deprecated-in-java-9
+         
+         protected void finalize() {
+         disconnect();
         }
+        */
+        
         /* (non-Javadoc)
          * @see org.epics.pvioc.pdrv.vxi11.VXI11Controller#createDevice(int, int)
          */
